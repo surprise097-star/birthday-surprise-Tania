@@ -1,0 +1,373 @@
+Paste this FULL code inside:
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Happy Birthday Tania 🎂</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  overflow-x:hidden;
+  min-height:100vh;
+  background:
+  radial-gradient(circle at top,#ffb6d9,#ff69b4,#ff1493);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:30px;
+}
+
+.container{
+  position:relative;
+  z-index:10;
+  width:90%;
+  max-width:900px;
+  padding:50px;
+  border-radius:35px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(15px);
+  box-shadow:0 0 40px rgba(255,255,255,0.2);
+  animation:fadeIn 2s ease;
+}
+
+h1{
+  font-size:4rem;
+  font-weight:700;
+  text-shadow:0 0 20px white;
+  animation:glow 2s infinite alternate;
+}
+
+.wish{
+  margin-top:25px;
+  font-size:1.3rem;
+  line-height:2.2rem;
+  animation:slideUp 2s ease;
+}
+
+.cake{
+  margin-top:30px;
+  font-size:7rem;
+  animation:cakeFloat 3s ease-in-out infinite;
+}
+
+.photos{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.photos img{
+  width:180px;
+  height:220px;
+  object-fit:cover;
+  border-radius:25px;
+  border:4px solid rgba(255,255,255,0.7);
+  box-shadow:0 0 25px rgba(255,255,255,0.5);
+  transition:0.5s;
+  animation:floatPic 4s ease-in-out infinite;
+}
+
+.photos img:hover{
+  transform:scale(1.08);
+}
+
+button{
+  margin-top:35px;
+  padding:15px 35px;
+  border:none;
+  border-radius:50px;
+  background:white;
+  color:#ff1493;
+  font-size:1rem;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+button:hover{
+  transform:scale(1.1);
+  background:#ff1493;
+  color:white;
+  box-shadow:0 0 20px white;
+}
+
+/* Animations */
+
+@keyframes glow{
+  from{
+    text-shadow:0 0 10px white;
+  }
+  to{
+    text-shadow:0 0 30px white,
+    0 0 60px #ff66cc;
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:scale(0.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+@keyframes slideUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes cakeFloat{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-20px);
+  }
+}
+
+@keyframes floatPic{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-10px);
+  }
+}
+
+/* Hearts */
+
+.heart{
+  position:absolute;
+  color:white;
+  animation:float 6s linear infinite;
+  opacity:0.8;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(100vh) scale(0);
+  }
+  100%{
+    transform:translateY(-10vh) scale(1.8);
+  }
+}
+
+/* Sparkles */
+
+.sparkle{
+  position:absolute;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:white;
+  animation:spark 2s linear infinite;
+}
+
+@keyframes spark{
+  0%{
+    transform:scale(0);
+    opacity:1;
+  }
+  100%{
+    transform:scale(3);
+    opacity:0;
+  }
+}
+
+/* Balloons */
+
+.balloon{
+  position:absolute;
+  font-size:45px;
+  animation:balloonMove 12s linear infinite;
+}
+
+@keyframes balloonMove{
+  0%{
+    transform:translateY(120vh);
+  }
+  100%{
+    transform:translateY(-120vh);
+  }
+}
+
+/* Fireworks */
+
+.firework{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  animation:boom 1.5s linear infinite;
+}
+
+@keyframes boom{
+  0%{
+    transform:scale(0);
+    opacity:1;
+  }
+  100%{
+    transform:scale(8);
+    opacity:0;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🎉 Happy Birthday Tania 🎂</h1>
+
+  <div class="wish">
+    Wishing you endless happiness, love, laughter, and beautiful memories 💖<br>
+    May your smile always shine brighter than the stars ✨<br>
+    Have the most amazing birthday ever 🎁
+  </div>
+
+  <div class="cake">🎂</div>
+
+  <div class="photos">
+
+    <img src="https://i.ibb.co.com/fGq3f4bv" alt="photo">
+
+    <img src="https://i.ibb.co.com/Mxb736xc" alt="photo">
+
+    <img src="https://i.ibb.co.com/nNF0XhF5" alt="photo">
+
+  </div>
+
+  <button onclick="surprise()">
+    Open Surprise ✨
+  </button>
+
+</div>
+
+<script>
+
+function surprise(){
+  alert("You deserve all the happiness in the world 💖🎂");
+}
+
+/* Floating Hearts */
+
+setInterval(() => {
+
+  const heart=document.createElement("div");
+
+  heart.classList.add("heart");
+
+  heart.innerHTML="💖";
+
+  heart.style.left=Math.random()*100+"vw";
+
+  heart.style.fontSize=Math.random()*25+20+"px";
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>{
+    heart.remove();
+  },6000);
+
+},250);
+
+
+/* Sparkles */
+
+setInterval(()=>{
+
+  const sparkle=document.createElement("div");
+
+  sparkle.classList.add("sparkle");
+
+  sparkle.style.left=Math.random()*100+"vw";
+
+  sparkle.style.top=Math.random()*100+"vh";
+
+  document.body.appendChild(sparkle);
+
+  setTimeout(()=>{
+    sparkle.remove();
+  },2000);
+
+},120);
+
+
+/* Balloons */
+
+setInterval(()=>{
+
+  const balloon=document.createElement("div");
+
+  balloon.classList.add("balloon");
+
+  balloon.innerHTML="🎈";
+
+  balloon.style.left=Math.random()*100+"vw";
+
+  document.body.appendChild(balloon);
+
+  setTimeout(()=>{
+    balloon.remove();
+  },12000);
+
+},1500);
+
+
+/* Fireworks */
+
+setInterval(()=>{
+
+  const firework=document.createElement("div");
+
+  firework.classList.add("firework");
+
+  firework.style.left=Math.random()*100+"vw";
+
+  firework.style.top=Math.random()*100+"vh";
+
+  firework.style.background=
+  `hsl(${Math.random()*360},100%,70%)`;
+
+  document.body.appendChild(firework);
+
+  setTimeout(()=>{
+    firework.remove();
+  },1500);
+
+},300);
+
+</script>
+
+</body>
+</html>
